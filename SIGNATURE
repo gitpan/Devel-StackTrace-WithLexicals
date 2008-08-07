@@ -1,0 +1,43 @@
+This file contains message digests of all files listed in MANIFEST,
+signed via the Module::Signature module, version 0.55.
+
+To verify the content in this distribution, first make sure you have
+Module::Signature installed, then type:
+
+    % cpansign -v
+
+It will check each file's integrity, as well as the signature's
+validity.  If "==> Signature verified OK! <==" is not displayed,
+the distribution may already have been compromised, and you should
+not run its Makefile.PL or Build.PL.
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+SHA1 c83281916bf50854cf14e284d8591e10a5b350fb Changes
+SHA1 726484ece96fbe5fcfd3629c45b4f550064e8250 MANIFEST
+SHA1 1f76375019cbfc94d02266964dd7dcb4819a6af3 META.yml
+SHA1 7b5264f6436ac5f4883e47b860641d20ff202e52 Makefile.PL
+SHA1 8b836389e4bc170eb8d19b7296b2f4978ac36136 inc/Module/Install.pm
+SHA1 85b32a1d5f215d99f411c3dd6113b537fcd5c57d inc/Module/Install/Base.pm
+SHA1 fde745e180861c7c0ba3ee5a767cafdbdb1d3ebd inc/Module/Install/Can.pm
+SHA1 e259400ceb54c34def9c994f52d7091108ce7ffc inc/Module/Install/Fetch.pm
+SHA1 da42b522e5a7ffbae0ceec900f3635ad9990c565 inc/Module/Install/Makefile.pm
+SHA1 ba005818ee9f97146bfa4e14e53c684e9e446902 inc/Module/Install/Metadata.pm
+SHA1 85e6b1cf5b7ca81bfb469a99389fa947d4b8a08e inc/Module/Install/Win32.pm
+SHA1 d32dff9f0d2f02023ca6d79a48d62fd855916351 inc/Module/Install/WriteAll.pm
+SHA1 077631f2780f8d988df64210f1c3228a339746d4 lib/Devel/StackTrace/WithLexicals.pm
+SHA1 61e8ec7c62e7fa0a978258842d468c531334213b lib/Devel/StackTrace/WithLexicals/Frame.pm
+SHA1 edc9829b93a0c8834672a3e3e47bcf05f4e86097 t/000-synopsis.t
+SHA1 14938dfd3c1a197e6a79fc5ed720cd3e8cb24726 t/001-basic.t
+SHA1 cae02e667f3702b2b360600527615eed47b0b02c t/002-nested.t
+SHA1 cbe6b80ef1efc86952886d26b91ef8ce3c9daed1 t/003-eval.t
+SHA1 fe45cad63f78e7f61039967e2fbd32b503bdab63 t/990-basic.t
+SHA1 5d8ee34d2d6d52e4eef526af6b5b622a8c775a47 t/991-bad-utf8.t
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.7 (Darwin)
+
+iD8DBQFImm3qsxfQtHhyRPoRAg03AJ9jgwEKxwcKMRdZ5ISKjZnhhrWmlQCfTQSI
+Cu+GSmuDUVH+rcbxOmKv+Lg=
+=bTSw
+-----END PGP SIGNATURE-----
