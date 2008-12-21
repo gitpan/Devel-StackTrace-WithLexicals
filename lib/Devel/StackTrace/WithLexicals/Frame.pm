@@ -23,5 +23,10 @@ sub new {
 
 sub lexicals { shift->{lexicals} }
 
+sub lexical {
+    my $self = shift;
+    return $self->lexicals->{$_[0]};
+}
+
 1;
 

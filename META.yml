@@ -16,6 +16,6 @@ no_index:
     - inc
     - t
 requires: 
-  Devel::StackTrace: 0
+  Devel::StackTrace: 1.1902
   PadWalker: 0
-version: 0.01
+version: 0.02

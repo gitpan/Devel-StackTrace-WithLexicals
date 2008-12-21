@@ -8,7 +8,7 @@ use Devel::StackTrace::WithLexicals::Frame;
 
 use PadWalker 'peek_my';
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 sub _record_caller_data {
     my $self = shift;
@@ -155,13 +155,13 @@ Devel::StackTrace::WithLexicals - Devel::StackTrace + PadWalker
     use Devel::StackTrace::WithLexicals;
 
     my $trace = Devel::StackTrace::WithLexicals->new;
-    ${ $trace->frame(0)->lexicals->{'$self'} }->oh_god_why();
+    ${ $trace->frame(1)->lexical('$self') }->oh_god_why();
 
 =head1 DESCRIPTION
 
 L<Devel::StackTrace> is pretty good at generating stack traces.
 
-L<PadWalker> is pretty good at inspection and modification of your callers'
+L<PadWalker> is pretty good at the inspection and modification of your callers'
 lexical variables.
 
 L<Devel::StackTrace::WithLexicals> is pretty good at generating stack traces
