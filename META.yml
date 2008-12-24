@@ -18,4 +18,4 @@ no_index:
 requires: 
   Devel::StackTrace: 1.1902
   PadWalker: 0
-version: 0.02
+version: 0.03
