@@ -1,14 +1,14 @@
-#!/usr/bin/env perl
 package Devel::StackTrace::WithLexicals;
 use strict;
 use warnings;
+use 5.008001;
 use base 'Devel::StackTrace';
 
 use Devel::StackTrace::WithLexicals::Frame;
 
 use PadWalker 'peek_my';
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 sub _record_caller_data {
     my $self = shift;
@@ -23,6 +23,12 @@ sub _record_caller_data {
         next if $sub eq '(eval)';
 
         $self->{raw}[$caller]{lexicals} = peek_my(++$walker);
+        if ($self->{no_refs}) {
+            for (values %{ $self->{raw}[$caller]{lexicals} }) {
+                $_ = $$_ if ref($_) eq 'REF';
+                $_ = $self->_ref_as_string($_);
+            }
+        }
     }
 
     # don't want to include the frame for this method!
@@ -173,26 +179,23 @@ All the same as L<Devel::StackTrace>, except that frames (in class
 L<Devel::StackTrace::WithLexicals::Frame>) also have a C<lexicals> method. This
 returns the same hashref as returned by L<PadWalker>.
 
+If the C<no_refs> option to L<Devel::StackTrace> is used, then each reference
+is stringified. This can be useful to avoid leaking memory.
+
 Simple, really.
 
 =head1 AUTHOR
 
-Shawn M Moore, C<< <sartak@gmail.com> >>
+Shawn M Moore, C<sartak@gmail.com>
 
 =head1 BUGS
-
-No known bugs.
 
 I had to copy and paste some code from L<Devel::StackTrace> to achieve this
 (it's hard to subclass). There may be bugs lingering here.
 
-Please report any bugs through RT: email
-C<bug-devel-stacktrace-withlexicals at rt.cpan.org>, or browse
-L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Devel-StackTrace-WithLexicals>.
-
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2008 Shawn M Moore.
+Copyright 2008-2009 Shawn M Moore.
 
 Some portions written by Dave Rolsky, they belong to him.
 

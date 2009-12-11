@@ -3,6 +3,7 @@ inc/Module/Install.pm
 inc/Module/Install/Base.pm
 inc/Module/Install/Can.pm
 inc/Module/Install/Fetch.pm
+inc/Module/Install/GithubMeta.pm
 inc/Module/Install/Makefile.pm
 inc/Module/Install/Metadata.pm
 inc/Module/Install/Win32.pm
@@ -12,10 +13,10 @@ lib/Devel/StackTrace/WithLexicals/Frame.pm
 Makefile.PL
 MANIFEST			This list of files
 META.yml
-SIGNATURE
 t/000-synopsis.t
 t/001-basic.t
 t/002-nested.t
 t/003-eval.t
+t/004-no-refs.t
 t/990-basic.t
 t/991-bad-utf8.t
