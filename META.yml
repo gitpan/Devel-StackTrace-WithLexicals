@@ -7,7 +7,7 @@ build_requires:
 configure_requires:
   ExtUtils::MakeMaker: 6.42
 distribution_type: module
-generated_by: 'Module::Install version 0.91'
+generated_by: 'Module::Install version 0.99'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -19,10 +19,10 @@ no_index:
     - t
 requires:
   Devel::StackTrace: 1.22
-  PadWalker: 0
+  PadWalker: 1.92
   perl: 5.8.1
 resources:
   homepage: http://github.com/sartak/Devel-StackTrace-WithLexicals/tree
   license: http://dev.perl.org/licenses/
   repository: git://github.com/sartak/Devel-StackTrace-WithLexicals.git
-version: 0.05
+version: 0.06
