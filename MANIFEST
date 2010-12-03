@@ -18,5 +18,6 @@ t/001-basic.t
 t/002-nested.t
 t/003-eval.t
 t/004-no-refs.t
+t/005-message-indent.t
 t/990-basic.t
 t/991-bad-utf8.t

@@ -8,7 +8,7 @@ use Devel::StackTrace::WithLexicals::Frame;
 
 use PadWalker 'peek_my';
 
-our $VERSION = '0.07';
+our $VERSION = '0.08';
 
 sub _record_caller_data {
     my $self = shift;
@@ -140,6 +140,8 @@ sub _add_frame {
 
     my $frame = $self->_frame_class->new(
         %$frame_data,
+        message          => $self->{message},
+        indent           => $self->{indent},
         respect_overload => $self->{respect_overload},
         max_arg_length   => $self->{max_arg_length},
     );
