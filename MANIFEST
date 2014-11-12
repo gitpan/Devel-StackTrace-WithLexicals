@@ -19,4 +19,11 @@ t/002-nested.t
 t/003-eval.t
 t/004-no-refs.t
 t/005-message-indent.t
-t/990-basic.t
+t/from-devel-stacktrace/01basic.t
+t/from-devel-stacktrace/02-bad-utf8.t
+t/from-devel-stacktrace/03-message.t
+t/from-devel-stacktrace/04-indent.t
+t/from-devel-stacktrace/06-dollar-at.t
+t/from-devel-stacktrace/07-no-args.t
+t/from-devel-stacktrace/08-filter-early.t
+t/from-devel-stacktrace/09-skip-frames.t
